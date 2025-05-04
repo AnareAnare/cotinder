@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (burgerBtn.length) {
         burgerBtn.forEach((burger) => {
             burger.addEventListener('click', function (e) {
-                this.classList.toggle('active');
+                burgerBtn.forEach((btn)=>{btn.classList.toggle('active');});
                 openMobileMenu(e, e.currentTarget);
             });
         });
