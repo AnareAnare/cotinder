@@ -1827,6 +1827,7 @@ input[type="checkbox"] {
     #mobile-back {
         display: flex;
         align-items: center;
+        color: var(--text-color2);
         transition: color 0.3s ease-in-out;
     }
 
@@ -1867,6 +1868,7 @@ input[type="checkbox"] {
         align-items: center;
         font-size: 29px;
         gap: 10px;
+        color: var(--text-color2);
         transition: color 0.3s ease-in-out;
     }
 
