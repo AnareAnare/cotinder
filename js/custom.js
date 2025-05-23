@@ -8,7 +8,7 @@ function closeMobileMenu(e, elem) {
     e.preventDefault();
     document.querySelector(".header-mobile").classList.remove("active");
     document.querySelector("body").classList.remove("ovh");
-    document.getElementById('burgerBtn').classList.toggle('active');
+    document.querySelectorAll('.burger').forEach((btn)=>{btn.classList.toggle('active');});
 }
 
 function openMobileDrop(e, elem) {
@@ -280,4 +280,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, 3000);
     }
+
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const eyeOpen = document.getElementById('eye-open');
+    const eyeClosed = document.getElementById('eye-closed');
+if(togglePassword) {
+    togglePassword.addEventListener('click', function() {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeClosed.style.display = "none";
+        eyeOpen.style.display = "";
+      } else {
+        passwordInput.type = "password";
+        eyeClosed.style.display = "";
+        eyeOpen.style.display = "none";
+      }
+    });
+
+    async function sendData(data) {
+        return await fetch('./js/server.php', {
+        method: 'POST',
+        body: data,
+        })
+    }
+    async function handleFormSubmit(event,form,btn) {
+        event.preventDefault();
+        let innerText = btn.textContent;
+        btn.textContent = 'Отправка...';
+        btn.setAttribute('disabled', true);
+        const data = new FormData(form);
+        const response = await sendData(data);
+        console.log(response);
+        btn.textContent = innerText;
+        btn.removeAttribute('disabled');
+}
+
+    const formAuth = document.querySelector('.authorization__form');
+    if(formAuth) {
+        formAuth.addEventListener('submit', (e) => {
+            handleFormSubmit(e,formAuth,document.querySelector('.authorization__btn'));
+        });
+    }
+}
 });
