@@ -297,11 +297,11 @@ if(togglePassword) {
         eyeOpen.style.display = "none";
       }
     });
-
+}
     async function sendData(data) {
         return await fetch('./js/server.php', {
-        method: 'POST',
-        body: data,
+        method: 'GET',/*здесь POST, GET для рабочего примера в верстке */
+        /*body: data,*/
         })
     }
     async function handleFormSubmit(event,form,btn) {
@@ -311,7 +311,10 @@ if(togglePassword) {
         btn.setAttribute('disabled', true);
         const data = new FormData(form);
         const response = await sendData(data);
-        console.log(response);
+        if(response.status == 200) {
+            form.reset();
+            window.location.replace('../index.html?auth=true')
+        }
         btn.textContent = innerText;
         btn.removeAttribute('disabled');
 }
@@ -322,5 +325,18 @@ if(togglePassword) {
             handleFormSubmit(e,formAuth,document.querySelector('.authorization__btn'));
         });
     }
-}
+    /*убрать start - код только для верстки */
+    const params = new URLSearchParams(window.location.search);
+    if(params) {
+        if(params.has('auth')) {
+            document.querySelectorAll('.header__non-authorized').forEach((block) => {
+                block.style.display = 'none';
+            });
+            document.querySelectorAll('.header__authorized').forEach((block) => {
+                block.style.display = 'flex';
+                });
+        }
+    }
+    /* убрать end*/
+
 });

@@ -1,1 +1,1 @@
-return {result: ok}
+<?return true;?>
