@@ -313,7 +313,7 @@ if(togglePassword) {
         const response = await sendData(data);
         if(response.status == 200) {
             form.reset();
-            window.location.replace('../index.html?auth=true')
+            window.location.replace('./index.html?auth=true')
         }
         btn.textContent = innerText;
         btn.removeAttribute('disabled');
