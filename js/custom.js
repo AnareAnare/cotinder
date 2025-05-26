@@ -55,6 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
     });
+    const swiperPet = new Swiper('.another-pet__swiper', {
+        breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
     // Константы диапазона
     const min = 2, max = 100, step = 1;
     let minValue = 2, maxValue = 100;
@@ -165,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tabsMain.length) {
         tabsMain[0].classList.add('index__tabs_btn-active');
         tabsContentMain[0].classList.add('tabs__content_active');
+        console.log(tabsContentMain[0]);
         tabsMain.forEach(element => {
             element.addEventListener('click', e => {
                 const path = e.currentTarget.dataset.path;
@@ -338,5 +360,14 @@ if(togglePassword) {
         }
     }
     /* убрать end*/
-
+    Fancybox.bind("[data-fancybox]", {
+  tpl: {
+    closeButton: '<button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small fancy__myClose" title="Close"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9997 26.3333C8.75218 26.3333 3.66634 21.2474 3.66634 14.9999C3.66634 8.75242 8.75218 3.66659 14.9997 3.66659C21.2472 3.66659 26.333 8.75242 26.333 14.9999C26.333 21.2474 21.2472 26.3333 14.9997 26.3333ZM14.9997 0.833252C7.16551 0.833252 0.833008 7.16575 0.833008 14.9999C0.833008 22.8341 7.16551 29.1666 14.9997 29.1666C22.8338 29.1666 29.1663 22.8341 29.1663 14.9999C29.1663 7.16575 22.8338 0.833252 14.9997 0.833252ZM18.6688 9.33325L14.9997 13.0024L11.3305 9.33325L9.33301 11.3308L13.0022 14.9999L9.33301 18.6691L11.3305 20.6666L14.9997 16.9974L18.6688 20.6666L20.6663 18.6691L16.9972 14.9999L20.6663 11.3308L18.6688 9.33325Z" fill="white"/></svg></button>',
+  },
+});
+$('.comment__replies').hide();
+$('.comment__likes button').on('click', function(e) {
+        let path = e.currentTarget.dataset.path;
+        $(`[data-target="${path}"]`).slideToggle();
+    });
 });
