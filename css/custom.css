@@ -3429,6 +3429,8 @@ input::placeholder {
 
 .pet__top_description {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .info {
@@ -3461,7 +3463,7 @@ input::placeholder {
 }
 
 .pet__about {
-    margin-bottom: 45px;
+    margin-bottom: auto;
 }
 
 .pet__info_flex {
@@ -3469,6 +3471,10 @@ input::placeholder {
     gap: 10px;
     align-items: stretch;
     margin-bottom: 10px;
+}
+
+.pet__button {
+    padding-top: 7px;
 }
 
 .pet__info_item {
@@ -3695,7 +3701,55 @@ input::placeholder {
     .pet .index__tabs_btn {
         width: 185px;
     }
-    .pet .swiper-button-prev, .pet .swiper-button-next {
+
+    .pet .swiper-button-prev,
+    .pet .swiper-button-next {
         top: 56px;
     }
+}
+
+.info__owner:not(:last-child) {
+    margin-right: 7px;
+}
+
+.person__info {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.person__info_search,
+.person__info_calendar,
+.person__info_donat {
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    height: auto;
+}
+
+.person__info_search,
+.person__info_donat {
+    max-width: 267px;
+}
+
+.person__info_calendar {
+    flex-grow: 1;
+}
+
+.map-widget-map-component canvas {
+    filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+}
+
+.person__info_map {
+    width: 227px;
+    height: 182px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
 }
