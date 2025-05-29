@@ -763,7 +763,7 @@
                                             </svg>От Вас: в 5 км
                                             </div>
                                         </div>
-                                        <div><span class="text-gray">Животные: </span><a href="№" class="info__owner">кошки</a><a href="№" class="info__owner"> собаки</a></div>
+                                        <div><span class="text-gray">Животные: </span><a href="#" class="info__owner">кошки</a><a href="#" class="info__owner"> собаки</a></div>
                                             <div><span class="text-gray">Тип пользователя: </span>Волонтёр</div>
                                             <div><span class="text-gray">Экспертность: </span>Хирург</div>
                                             <div><span class="text-gray">Количество животных: </span>4</div>
@@ -786,12 +786,49 @@
                             </div>
                             <div class="person__info">
                                 <div class="person__info_search">
+                                    <div class="person__info_search-text">Нужна помощь: Поиск</div>
                                     <div class="person__info_map">
-                                        
+                                    </div>
+                                    <button class="btn btn__transprent person__info_btn">Написать владельцу</button>
+                                </div>
+                                <div class="person__info_calendar">
+                                    <div class="person__info_comunity">
+                                        <div>Календарь событий</div>
+                                        <div><span class="text-gray">Челенж: </span><span class="text-main">10</span></div>
+                                        <div><span class="text-gray">Конкурсы: </span><span class="text-main">2</span></div>
+                                        <div><span class="text-gray">Коллабы: </span><span class="text-main">3</span></div>
+                                        <div><span class="text-gray">Призы </span><span class="text-main">4</span></div>
+                                    </div>
+                                    <div>
+                                        <div class="calendar">
+    <div id="monthYear"></div>
+    <table class="calendar-table" id="calendarTable">
+      <thead>
+        <tr>
+          <th>Пн</th>
+          <th>Вт</th>
+          <th>Ср</th>
+          <th>Чт</th>
+          <th>Пт</th>
+          <th>Сб</th>
+          <th>Вс</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
                                     </div>
                                 </div>
-                                <div class="person__info_calendar"></div>
-                                <div class="person__info_donat"></div>
+                                <div class="person__info_donat">
+                                    <div class="person__info_comunity">
+                                        <div class="person__info_comunity-flex">Комьюнити: <span class="text-main">Онлайн</span></div>
+                                        <div><span class="text-gray">Состоит в группе: </span><span class="text-main">10</span></div>
+                                        <div><span class="text-gray">Радиус помощи: </span><span class="text-main">2</span></div>
+                                        <div><span class="text-gray">Объявления: </span><span class="text-main">3</span></div>
+                                        <div><span class="text-gray">Сборы: </span><span class="text-main">4</span></div>
+                                    </div>
+                                    <button class="btn btn__default btn__default_comunity">Отправить донат</button>
+                                </div>
                             </div>
                             <div class="index__tabs">
                         <div class="index__tabs_wrapper">
@@ -1786,7 +1823,235 @@
                         </div>
                     </div>
                     <div class="tabs__content tabs__content_pet" data-target="comm"></div>
-                    <div class="tabs__content tabs__content_pet" data-target="similar"></div>
+                    <div class="tabs__content tabs__content_pet comments" data-target="similar">
+                        <div class="full-width">
+                        <h3 class="comments__title">Сегодня</h3>
+                        <div class="comments__body">
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/com.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/comm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/commm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/commmm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/co5m.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/co6m.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <h3 class="comments__title">Вчера</h3>
+                        <div class="comments__body">
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/com.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/comm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/commm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/commmm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/co5m.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/co6m.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <h3 class="comments__title">На этой неделе</h3>
+                        <div class="comments__body">
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/com.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/comm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/commm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/commmm.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/co5m.jpg" alt=""></div>
+                            </div>
+                            <div class="comments__reaction">
+                                <div class="comments__rounds">
+                                    <img src="./image/round1.jpg" alt="" class="comments__rounds_first">
+                                    <img src="./image/round2.jpg" alt="" class="comments__rounds_second">
+                                </div>
+                                <div class="comments__text">
+                                    <div><a href="./pet.html" class="comments__link">@bobickdog</a>, <a href="./pet.html" class="comments__link">@lickydogparrent</a>, <a href="./pet.html" class="comments__link">@hellokitty</a></div>
+                                    <div>и 62 поставили нравится вашему комментарию:</div>
+                                    <div class="comments__preview">Классная игрушка у нас тоже была такая в щенячем возрасте, он ее разорвал потом долго искал и никак не мог найти...</div>
+                                </div>
+                                <div class="comments__post"><img src="./image/co6m.jpg" alt=""></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                     <div class="tabs__content tabs__content_pet" data-target="act"></div>
                         </div>
                     </div>
