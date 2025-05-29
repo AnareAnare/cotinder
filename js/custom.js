@@ -376,14 +376,14 @@ $('.comment__likes button').on('click', function(e) {
 async function initMap() {
     await ymaps3.ready;
 
-    const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
 
     const map = new YMap(
         document.querySelector('.person__info_map'),
         {
             location: {
                 center: [37.588144, 55.733842],
-                zoom: 10
+                zoom: 15
             }
         }
     );
@@ -7015,7 +7015,69 @@ async function initMap() {
     }
 ]
     }));
+    // Добавляем слой объектов
+map.addChild(new YMapDefaultFeaturesLayer())
+
+// Подключение модуля меток
+  const {YMapDefaultMarker} = (await ymaps3.import('@yandex/ymaps3-markers@0.0.1'));
+
+// Создание метки
+const myPlacemark = new YMapDefaultMarker({
+  "coordinates": [37.588144, 55.733842],
+  "color": "orange",
+});
+
+// Добавление метки на карту
+map.addChild(myPlacemark);
 }
 
 initMap();
+
+const monthNames = [
+      "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
+      "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    ];
+
+    const dayCircles = [10, 17, 12]; // Просто для примера, чтобы показать "серые" кружки
+
+    function renderCalendar() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      const today = now.getDate();
+
+      // Заголовок (месяц)
+      document.getElementById("monthYear").innerText = `${monthNames[month]}`;
+
+      // Первый день месяца (начинается с Пн)
+      const firstDayOfWeek = (d => d === 0 ? 6 : d - 1)(new Date(year, month, 1).getDay());
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      // Сколько всего должно быть ячеек в календаре (чтобы заполнить полные недели)
+      const totalDays = Math.ceil((firstDayOfWeek + daysInMonth) / 7) * 7;
+
+      let html = '<tr>';
+      let day = 1;
+      for(let i=0; i < totalDays; i++) {
+        // Если это начало строки и не первая строка
+        if(i % 7 === 0 && i !== 0) html += '</tr><tr>';
+
+        if(i < firstDayOfWeek) {
+          html += '<td class="grey"></td>';
+        } else if(day > daysInMonth) {
+          html += '<td class="grey"></td>';
+        } else {
+          let cellClass = '';
+          if(day === today) cellClass = 'today';
+          else if(dayCircles.includes(day)) cellClass = 'day-circle';
+          html += `<td class="${cellClass}">${day.toString().padStart(2, '0')}</td>`;
+          day++;
+        }
+      }
+      html += '</tr>';
+      document.querySelector("#calendarTable tbody").innerHTML = html;
+    }
+    if(document.getElementById('calendarTable')) {
+    renderCalendar();
+    }
 });
