@@ -565,13 +565,16 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 20px 20px 0px 0px;
-    margin: 0px -1px;
     height: 100%;
     background: var(--main-white);
     border: 1px solid var(--border-color);
     text-align: left;
     color: var(--text-color2);
     transition: color 0.3s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.index__tabs_btn:not(:first-of-type) {
+    margin: 0px -1px;
 }
 
 .index__tabs_title {
@@ -4163,5 +4166,99 @@ input::placeholder {
     .be-part__bottom {
         padding: 10px;
         min-height: 0;
+    }
+}
+
+/*404*/
+.not-found {
+    padding: 60px 0;
+}
+
+.not-found__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 79px;
+}
+
+.not-found__content img {
+    max-width: 967px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.not-found__title {
+    margin-bottom: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.not-found__text {
+    margin-bottom: 30px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.not-found__btn {
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@media (max-width: 1280px) {
+    .not-found__content {
+        padding-top: 60px;
+    }
+
+    .not-found__title {
+        margin-bottom: 20px;
+        font-size: 54px;
+    }
+
+    .not-found__text {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .not-found {
+        padding: 40px 0 60px;
+    }
+
+    .not-found__title {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .not-found__text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found {
+        padding: 20px 0 40px;
+    }
+
+    .not-found__content {
+        padding-top: 40px;
+    }
+    .not-found__title {
+        font-size: 28px;
+        margin-bottom: 17px;
+    }
+    .not-found__text {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 17px;
     }
 }
