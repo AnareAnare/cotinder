@@ -186,7 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tabsMain.length) {
         tabsMain[0].classList.add('index__tabs_btn-active');
         tabsContentMain[0].classList.add('tabs__content_active');
-        console.log(tabsContentMain[0]);
         tabsMain.forEach(element => {
             element.addEventListener('click', e => {
                 const path = e.currentTarget.dataset.path;
@@ -280,8 +279,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     if (window.matchMedia('(max-width: 620px)').matches) {
-        if (document.querySelector('.index__search_input')) {
-            document.querySelector('.index__search_input').placeholder = 'Введите имя питомца...';
+        if (document.querySelector('.index__search_input.index__search_input-cutMob')) {
+            document.querySelector('.index__search_input.index__search_input-cutMob').placeholder = 'Введите имя питомца...';
         }
     }
     const curator = document.querySelector('.curator-block');
@@ -372,7 +371,7 @@ $('.comment__likes button').on('click', function(e) {
         $(`[data-target="${path}"]`).slideToggle();
     });
 }
-
+if(document.querySelector('.person__info_map')) {
 async function initMap() {
     await ymaps3.ready;
 
@@ -7032,7 +7031,7 @@ map.addChild(myPlacemark);
 }
 
 initMap();
-
+}
 const monthNames = [
       "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", 
       "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
