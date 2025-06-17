@@ -156,6 +156,87 @@ body {
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-color2);
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.paragraph,
+.paragraph-midi,
+.paragraph-mini,
+.paragraph-sub {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: #372F2F;
+}
+
+.paragraph {
+    font-size: 34px;
+    line-height: 41px;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 56px;
+}
+
+.paragraph-midi {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.paragraph-mini {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h3 {
+    font-size: 34px;
+    line-height: 41px;
+}
+
+.img-wrapper {
+    margin-bottom: 20px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+h4 {
+    font-family: 'Jost';
+    font-size: 36px;
+    line-height: 110%;
+}
+
+.paragraph-sub {
+    font-size: 16px;
+    line-height: 19px;
+}
+.video-wrapper {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px 40px 40px;
+    background: #E5F0FF;
+}
+.video {
+    width: 100%;
+    max-height: 626px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
 .burger {
     display: none;
 }
@@ -1208,6 +1289,7 @@ input[type="checkbox"] {
     margin: 0;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -4252,10 +4334,12 @@ input::placeholder {
     .not-found__content {
         padding-top: 40px;
     }
+
     .not-found__title {
         font-size: 28px;
         margin-bottom: 17px;
     }
+
     .not-found__text {
         font-size: 16px;
         line-height: 19px;
