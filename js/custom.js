@@ -55,6 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
     });
+    const swiperForm = new Swiper('.post-form__swiper', {
+        breakpoints: {
+        320: {
+            slidesPerView: 'auto',
+            spaceBetween: 6
+        },
+        992: {
+            slidesPerView: 'auto',
+            spaceBetween: 17
+        },
+    },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
     const swiperPet = new Swiper('.another-pet__swiper', {
         breakpoints: {
         320: {
@@ -7079,4 +7096,57 @@ const monthNames = [
     if(document.getElementById('calendarTable')) {
     renderCalendar();
     }
+    const postUsers = document.querySelectorAll('.post-form__slide');
+    if(postUsers.length) {
+        postUsers.forEach((postUser) => {
+            postUser.addEventListener('click', ()=> {
+                postUsers.forEach((postUser) => {
+                postUser.classList.remove('active');
+            });
+            postUser.classList.add('active');
+            });
+        });
+    }
+    const dropZone = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+const slots = document.getElementById('slots').querySelectorAll('.slot');
+let currentSlotIndex = 0; // Индекс текущего свободного слота
+
+const handleFiles = (files) => {
+  // Проход по каждому файлу
+  [...files].forEach((file) => {
+    if (currentSlotIndex >= slots.length) return; // Проверяем наличие свободного слота
+
+    const slot = slots[currentSlotIndex];
+    const fileURL = URL.createObjectURL(file);
+
+    // Показать изображение или видео
+    if (file.type.startsWith('image/')) {
+      slot.innerHTML = `<img src="${fileURL}" alt="Загружено">`;
+    } else if (file.type.startsWith('video/')) {
+      slot.innerHTML = `<video src="${fileURL}" autoplay muted loop></video>`;
+    }
+
+    currentSlotIndex++; // Переходим к следующему слоту
+  });
+};
+
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropZone.style.background = 'linear-gradient(180deg, #c598ef, #67cceb)';
+});
+
+dropZone.addEventListener('dragleave', () => {
+  dropZone.style.background = 'linear-gradient(180deg, #d8a7ff, #72d6f8)';
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropZone.style.background = 'linear-gradient(180deg, #d8a7ff, #72d6f8)';
+  handleFiles(e.dataTransfer.files);
+});
+
+fileInput.addEventListener('change', () => {
+  handleFiles(fileInput.files);
+});
 });
