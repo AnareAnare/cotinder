@@ -4933,6 +4933,9 @@ label.label-title {
 .form-group__checkbox input {
     width: 10px;
 }
+.form-group__checkbox input[type="checkbox"] {
+    height: 0;
+}
 
 .form-group__title {
     margin-bottom: 20px;
