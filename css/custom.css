@@ -1319,7 +1319,7 @@ ul.list-reset li.header__item {
 input[type="checkbox"] {
     accent-color: #fa8800;
     width: 19px;
-    height: 5px;
+    height: 0px;
     cursor: pointer;
 }
 
