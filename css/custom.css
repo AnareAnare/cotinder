@@ -1273,9 +1273,10 @@ ul.list-reset li.header__item {
     position: relative;
     content: '';
     display: inline-block;
-    width: 19px;
-    height: 19px;
-    top: -7px;
+    width: 20px;
+    height: 20px;
+    top: -11px;
+    left: -1px;
     background-color: #fff;
     border: 2px solid var(--main-color);
     border-radius: 4px;
@@ -1317,6 +1318,7 @@ ul.list-reset li.header__item {
 }
 
 input[type="checkbox"] {
+    -webkit-appearance: none;
     width: 19px;
     height: 0px;
     cursor: pointer;
@@ -4934,6 +4936,7 @@ label.label-title {
 }
 .form-group__checkbox input[type="checkbox"] {
     height: 0;
+    padding: 0;
 }
 
 .form-group__title {
