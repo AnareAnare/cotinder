@@ -4953,7 +4953,7 @@ label.label-title {
     display: inline-block;
     width: 25px;
     height: 25px;
-    top: 22px;
+    top: -11px;
     left: -1px;
     background-color: #fff;
     border: 2px solid var(--main-color);
