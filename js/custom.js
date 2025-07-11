@@ -218,6 +218,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const tabsPerson = document.querySelectorAll('.person__form-tab');
+    const tabsPersonContent = document.querySelectorAll('.person__form-content');
+    if (tabsPerson.length) {
+        tabsPerson[0].classList.add('person__form-tab_active');
+        tabsPersonContent[0].classList.add('person__form-content_active');
+        tabsPerson.forEach(element => {
+            element.addEventListener('click', e => {
+                const path = e.currentTarget.dataset.path;
+                tabsPerson.forEach(btn => {
+                    btn.classList.remove('person__form-tab_active');
+                });
+                e.currentTarget.classList.add('person__form-tab_active');
+                tabsPersonContent.forEach(element => {
+                    element.classList.remove('person__form-content_active');
+                });
+                document.querySelector(`[data-target="${path}"]`).classList.add('person__form-content_active');
+            });
+        });
+    }
+
     const video = document.querySelectorAll('.bg-video');
     const playPauseButton = document.querySelectorAll('.icon__video_play');
     const volumeButton = document.querySelectorAll('.icon__video_volume');
@@ -7107,6 +7127,7 @@ const monthNames = [
             });
         });
     }
+    if (document.getElementById('slots') ) {
     const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
 const slots = document.getElementById('slots').querySelectorAll('.slot');
@@ -7149,4 +7170,5 @@ dropZone.addEventListener('drop', (e) => {
 fileInput.addEventListener('change', () => {
   handleFiles(fileInput.files);
 });
+    }
 });
