@@ -4934,6 +4934,7 @@ label.label-title {
 .form-group__checkbox input {
     width: 10px;
 }
+
 .form-group__checkbox input[type="checkbox"] {
     height: 0;
     padding: 0;
@@ -5273,4 +5274,403 @@ label.label-title {
     .post-form__flex {
         flex-wrap: wrap;
     }
+}
+
+.person__form.tabs__content {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.person__form-menu {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.person__form-menu_top {
+    margin-bottom: 20px;
+}
+
+.person__form-menu_bottom {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.person__form-menu_item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.person__form-menu_link {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.person__form-menu_active {
+    background-color: #EFF4FB;
+}
+
+.person__form-menu_link:focus,
+.person__form-menu_link:hover {
+    background-color: #EFF4FB;
+}
+
+.person__form-menu_bottom .person__form-menu_link:focus,
+.person__form-menu_bottom .person__form-menu_link:hover {
+    color: var(--text-color);
+}
+
+.person__form-menu_bottom .person__form-menu_link {
+    color: #fff;
+}
+
+.person__form-content {
+    display: none;
+    padding: 40px;
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.person__form-content_active {
+    display: block;
+}
+
+.person__form-tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.person__form-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+    background: #E9E9E9;
+    border-radius: 20px 20px 0px 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #C3C3C3;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.person__form-tab_active {
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+.person__form-tab:focus,
+.person__form-tab:hover {
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+.post-form__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.post-form__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.post-form__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.post-form__line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-form__span {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-color2);
+}
+
+.post-form__flex.person__form_avatar {
+    margin-bottom: 20px;
+}
+
+.person__form_avatar .tabs__content_title {
+    margin-bottom: 0;
+}
+
+.person__form .form-container {
+    padding: 40px;
+}
+
+.person__form .info-box img {
+    margin-bottom: 15px;
+}
+
+.person__form .info-box p {
+    margin-bottom: 15px;
+}
+
+.person__form .radius-box {
+    padding: 24px;
+    font-size: 20px;
+}
+
+.person__form .slider-wrap {
+    margin-bottom: 0;
+    padding: 12px 2px;
+    height: 52px;
+    background: #D9E8FE;
+    border-radius: 240px;
+}
+
+.person__form .slider-track {
+    left: 10px;
+    right: 10px;
+    background: #fff;
+}
+
+.post-form__important_person.post-form__important {
+    min-height: 0;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 299px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    border: none;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.post-form__important_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.post-form__important_flex .post-form__important_title {
+    margin-bottom: 0;
+}
+
+.form-container__bottom {
+    background-color: #D9E8FE;
+    padding: 20px 30px;
+}
+
+.person__form_form {
+    margin-bottom: 20px;
+}
+
+.person__form .form-container.form-container__bottom {
+    margin-bottom: 0;
+}
+
+.person__form .form-container.form-container__bottom_back {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-bottom: 20px;
+    padding: 47px 50px 47px 247px;
+    background: #D9E8FE url(../image/back-dog.png) no-repeat bottom left 24px;
+}
+
+.add-pet {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--text-color2);
+}
+
+.form-container__bottom_back .btn {
+    width: 315px;
+    text-align: center;
+}
+
+.form-container__bottom .tabs__content_title {
+    font-size: 24px;
+    width: 100%;
+}
+
+.person__form-content .post-form__swiper_wrapper {
+    margin: 0;
+    overflow: hidden;
+}
+
+.person__form-content .post-form__swiper {
+    margin: 0;
+}
+
+.person__form-content .swiper-slide.post-form__slide img {
+    width: 114px;
+    height: 114px;
+}
+
+.person__form-content .swiper-slide.post-form__slide {
+    width: 114px;
+    border: none;
+    height: 140px;
+    border-radius: 0;
+}
+
+.person__form-content .swiper-slide.post-form__slide span {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #888888;
+}
+
+.person__form-content .post-form__swiper_wrapper .swiper-button-prev {
+    left: 5px;
+}
+
+.person__form-content .post-form__swiper_wrapper .swiper-button-next {
+    right: 5px;
+}
+
+@media (max-width: 1280px) {
+    .person__form-content {
+        padding: 20px;
+    }
+
+    .form-container__bottom .tabs__content_title {
+        font-size: 20px;
+    }
+
+    .person__form .form-container {
+        padding: 20px;
+    }
+
+    .post-form__important_person.post-form__important {
+        padding: 20px;
+    }
+
+    .person__form .form-container.form-container__bottom_back {
+        padding: 20px 20px 20px 247px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .person__form .form-container.form-container__bottom_back {
+        background: #D9E8FE url(../image/back-dog.png) no-repeat bottom left 24px / 126px 99px;
+    }
+
+    .person__form .filter-close {
+        z-index: 10;
+    }
+
+    .person__form-menu_bottom .person__form-menu_link {
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 992px) {
+    .person__form .radius-box {
+        padding: 19px;
+    }
+
+    .post-form__title {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .person__form-tab {
+        padding: 10px 17px;
+        font-size: 16px;
+    }
+
+    .post-form__important_flex {
+        flex-direction: column;
+        gap: 20px;
+        align-items: normal;
+    }
+
+    .add-pet {
+        font-size: 16px;
+    }
+
+    .form-container__bottom_back .btn {
+        width: 100%;
+    }
+
+    .person__form .form-container.form-container__bottom_back {
+        padding: 243px 20px 10px 20px;
+        flex-direction: column;
+        align-items: normal;
+        background: #D9E8FE url(../image/back-dog2.png) no-repeat top 10px center / 183px 223px;
+    }
+}
+
+@media (max-width: 480px) {
+    .person__form-tab {
+        line-height: 19px;
+    }
+
+    .person__form .radius-box {
+        font-size: 16px;
+    }
+
+    .post-form__important_title.post-form__important_big {
+        font-size: 16px;
+    }
+
+    .form-container__bottom .tabs__content_title {
+        font-size: 16px;
+    }
+
+    .person__form .curator-link {
+        font-size: 16px;
+    }
+
+    .info-box__mobile {
+        max-height: 170px;
+    }
+}
+
+.dog-tab {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.person__form-tab_active.dog-tab {
+    background-color: #fff;
+    color: var(--text-color);
 }
