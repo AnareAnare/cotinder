@@ -5674,3 +5674,271 @@ label.label-title {
     background-color: #fff;
     color: var(--text-color);
 }
+
+.no-pet .drop-zone {
+    width: 600px;
+    background: none;
+    border: 2px dashed #AFB9C8;
+    cursor: pointer;
+}
+
+.upload-container__wrapper {
+    background-color: #EFF4FB;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.no-pet .instructions {
+    color: var(--text-color2);
+}
+
+.no-pet .instructions-mini {
+    color: var(--text-color2);
+}
+
+.no-pet .center-content .plus {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.no-pet .ring {
+    border-color: rgba(253, 119, 40, .35);
+}
+
+.no-pet .drop-zone:hover .ring1,
+.no-pet .drop-zone:hover .ring2,
+.no-pet .drop-zone:hover .ring3 {
+    border-color: rgba(253, 119, 40, .35);
+}
+
+.no-pet .info-box p {
+    text-align: left;
+}
+
+@media (max-width: 1280px) {
+    .upload-container__wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .no-pet .drop-zone {
+        width: 100%;
+        height: 352px;
+    }
+
+    .no-pet .upload-container {
+        margin-bottom: 20px;
+    }
+
+    .no-pet .info-box__mobile {
+        background-color: #fff;
+    }
+
+    .person__form-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-container__wrapper {
+        padding: 10px;
+    }
+}
+
+.pet-accounts .post-form__flex.person__form_avatar {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #D9E8FE;
+}
+
+.pet-accounts__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 40px;
+    min-width: 244px;
+    height: 41px;
+    background: #D9E8FE;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--text-color2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.post-form__flex .tabs__content_title {
+    margin-bottom: 0;
+}
+
+.post-form__flex_top {
+    margin-bottom: 40px;
+}
+
+.pet-accounts__add:focus,
+.pet-accounts__add:hover {
+    background-color: #FFC422;
+}
+
+.pet-list {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pet-item {
+    width: calc((100% - 40px) / 3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pet-item__top {
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pet-item__top img {
+    width: 100%;
+    height: 312px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pet-list .card-user {
+    background: #D9E8FE;
+}
+
+.pet-item__button {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.pet-delete {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    min-width: 0;
+    transform: translateY(-100px);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.pet-item__top:hover .pet-delete {
+    transform: translateY(0);
+}
+
+.delete-alert {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    transform: translateY(500px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.delete-alert__active {
+    transform: translateY(0);
+}
+
+.delete-alert__info {
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--text-color2);
+    text-align: center;
+}
+
+.delete-alert__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.petNotDelete,
+.petDelete {
+    border: none;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.petNotDelete {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.petNotDelete:focus,
+.petNotDelete:hover {
+    background-color: var(--basic-blue-color);
+}
+
+@media (max-width: 1280px) {
+    .pet-item__top img {
+        height: 220px;
+    }
+
+    .delete-alert {
+        padding: 10px;
+    }
+
+    .petNotDelete,
+    .petDelete {
+        height: 34px;
+        padding: 6px 29px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pet-list {
+        row-gap: 20px;
+    }
+
+    .pet-item {
+        width: calc((100% - 20px) / 2);
+    }
+
+    .pet-accounts__add {
+        font-size: 12px;
+        padding: 6px 20px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-item {
+        width: 100%;
+    }
+
+    .pet-item__top img {
+        height: 335px;
+    }
+
+    .post-form__flex_top {
+        margin-bottom: 20px;
+        gap: 7px;
+    }
+
+    .pet-accounts .post-form__flex.person__form_avatar {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
